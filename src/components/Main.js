@@ -1,4 +1,5 @@
 import Contacts from "./Contacts";
+import "./Main.css";
 
 export function Main ( ) {
     return (

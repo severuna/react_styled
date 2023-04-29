@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Contact from "./Contact";
+import "./Contacts.css";
 
 const contacts = [
     {
@@ -40,11 +41,11 @@ export function Contacts ( ) {
     const [state, setState] = useState({contacts});
 
     return (
-        <div className="container row">
+        <div className="container column">
             <p className="container-title">Contacts</p>
-            <div>
+            <div className="container-list column">
             {state.contacts.map((contact) => (
-                    <Contact  firstName={contact.firstName} lastName={contact.lastName} phone={contact.phone} />
+                <Contact  firstName={contact.firstName} lastName={contact.lastName} phone={contact.phone} />
             ))}
             </div>
         </div>

@@ -1,10 +1,11 @@
+import "./Contact.css";
+
 export function Contact ( props ) {
 
     return (
-        <div className="item column">
-            <p className="item-field"><span>Fisrt Name:</span> {props.firstName}</p>
-            <p className="item-field"><span>Last Name:</span> {props.lastName}</p>
-            <p className="item-field"><span>Phone Name:</span> {props.phone}</p>
+        <div className="item row">
+            <p className="item-field">{props.firstName} {props.lastName}</p>
+            <p className="item-field"><span>Phone:</span> {props.phone}</p>
         </div>
     )
 }

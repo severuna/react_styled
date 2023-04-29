@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+
+.container {
+    gap: 3rem;
+    align-items: center;
+    width: 100%;
+}
+
+.container-title {
+    font-size: 3rem;
+    font-family: 'Bruno Ace SC', cursive;
+    font-weight: 900;
+    letter-spacing: 1.5rem;
+    text-transform: uppercase;
+}
+
+.container-list {
+    width: 100%;
+    gap: 1.5rem;
+}
