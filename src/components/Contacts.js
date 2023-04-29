@@ -1,6 +1,6 @@
 import Contact from "./Contact";
 
-function Contacts ( props ) {
+export function Contacts ( props ) {
 
     return (
         <div className="container row">

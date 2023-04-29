@@ -1,4 +1,4 @@
-function Contact ( props ) {
+export function Contact ( props ) {
 
     return (
         <div className="item column">
