@@ -1,10 +1,11 @@
-function Contacts ( props ) {
+import Contact from "./Contact";
 
-    console.log(props);
+function Contacts ( props ) {
 
     return (
         <div className="container row">
             <p className="container-title">Contacts</p>
+            <Contact props={props} />
         </div>
     )
 }
