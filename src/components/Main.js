@@ -1,10 +1,10 @@
-function Main ( props ) {
+import Contacts from "./Contacts";
 
-    console.log(props);
-    
+function Main ( props ) {
     return (
         <div className='main column'>
             <h1 className='title'>Homework 16. ReactJS. Hooks</h1>
+            <Contacts props={props} />
         </div>
     )
 }
