@@ -69,21 +69,19 @@ function Contact ( props ) {
 
 function Main ( ) {
 
-    const [contacts, setContacts] = useState(contacts_all);
+  const [search, setSearch] = useState('');
 
-    const [search, setSearch] = useState('');
+  const [contacts, setContacts] = useState(contacts_all);
 
-    function handleSearchChange( event ) {
+  function handleSearchChange( event ) {
 
-      setSearch(event.target.value);
+    setSearch(event.target.value);
 
-      let filteredContacts = []
+    let filteredContacts =  contacts_all.filter(el => String(el.lastName).toLowerCase().includes(String(search).toLowerCase()));
 
-      filteredContacts =  contacts_all.filter(el => String(el.lastName).toLowerCase().includes(String(search).toLowerCase()));
+    setContacts(filteredContacts);
 
-      setContacts(filteredContacts);
-
-    }
+  }
 
     return (
       <div className='main column'>
