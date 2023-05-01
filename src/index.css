@@ -98,6 +98,10 @@ body {
   width: 100%;
 }
 
+.item-pic {
+  width: 4rem;
+}
+
 .item-field {
   font-family: var(--main-ff);
   font-weight: var(--regular);

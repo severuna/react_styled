@@ -1,17 +1,9 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-
-function Contact ( props ) {
-
-  return (
-    <div className='item row'>
-        <p className='item-field'><span>Contact:</span> {props.firstName} {props.lastName}</p>
-        <p className='item-field'><span>Phone:</span> {props.phone}</p>
-    </div>
-  )
-
-}
+import man from './img/man.svg';
+import women from './img/women.svg';
+import unknown from './img/unknown.svg';
 
 const contacts_all = [
   {
@@ -46,42 +38,63 @@ const contacts_all = [
   }
 ];
 
+function Contact ( props ) {
+
+  function setGender ( gender ) {
+
+    if (gender === 'male') {
+
+      return man
+
+    } else if ( gender === 'female') {
+
+      return women
+
+    } else {
+
+      return unknown
+
+    }
+  }
+
+  return (
+    <div className='item row'>
+      <img className='item-pic' src={setGender(props.gender)} alt='gender' />
+      <p className='item-field'><span>Contact:</span> {props.firstName} {props.lastName}</p>
+      <p className='item-field'><span>Phone:</span> {props.phone}</p>
+    </div>
+  )
+
+}
+
 function Main ( ) {
 
     const [contacts, setContacts] = useState(contacts_all);
 
     const [search, setSearch] = useState('');
 
-    let elements = [];
-
-    contacts.forEach((el, i) => {
-        elements.push(
-          <Contact firstName={el.firstName} lastName={el.lastName} phone={el.phone} key={i} /> 
-        )
-    });
-
-
     function handleSearchChange( event ) {
 
       setSearch(event.target.value);
 
-      let filteredContacts =  contacts_all.filter(el => String(el.lastName).toLowerCase().includes(String(search).toLowerCase()));
+      let filteredContacts = []
+
+      filteredContacts =  contacts_all.filter(el => String(el.lastName).toLowerCase().includes(String(search).toLowerCase()));
 
       setContacts(filteredContacts);
 
     }
 
-
-  return (
-    <div className='main column'>
-      <h1 className='title'>Homework 16.ReactJS.Hooks</h1>
-        <div className='container column'>
-          <h2 className='subtitle'>Contacts</h2>
-          <input className='search' placeholder='Find a person...' value={search} onChange={ (event) => { handleSearchChange(event) }} />
-            {elements}
-        </div>
-    </div>
-  )
+    return (
+      <div className='main column'>
+        <h1 className='title'>Homework 16.ReactJS.Hooks</h1>
+          <div className='container column'>
+            <h2 className='subtitle'>Contacts</h2>
+            <input className='search' placeholder='Find a person...' value={search} onChange={ (event) => { handleSearchChange(event) }} />
+              { contacts.map((el, i) => <Contact {...el} key={i} /> )}
+          </div>
+      </div>
+    )
 
 }
 
