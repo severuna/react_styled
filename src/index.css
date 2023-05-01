@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Kanit:wght@400;700&family=Sigmar&display=swap');
+
 html {
   font-size: 10px;
 }
@@ -11,11 +13,29 @@ html {
 }
 
 body {
-  background-color: #232323;
+  display: flex;
   max-width: 100vw;
   min-height: 100vh;
-  display: flex;
   justify-content: center;
+  background-color: var(--color-black);
+}
+
+:root {
+  --regular: 400;
+  --bold: 700;
+  --title-ff: 'Sigmar', cursive;
+  --title-fs: 4rem;
+  --subtitle-ff: 'Bruno Ace SC', cursive;
+  --subtitle-fs: 3rem;
+  --main-fs: 2.4rem;
+  --main-ff: 'Kanit', sans-serif;
+  --gap: 3rem;
+  --color-blue: turquoise;
+  --color-red: tomato;
+  --color-light: azure;
+  --color-black: #232323;
+  --letter-spacing: .9rem;
+  --padding: 2rem;
 }
 
 .column {
@@ -26,4 +46,54 @@ body {
 .row {
   display: flex;
   flex-direction: row;
+}
+
+.main {
+  margin: 3rem auto;
+  gap: var(--gap);
+  width: 80vw;
+  text-align: center;
+  align-items: center;
+}
+
+.title {
+  font-size: var(--title-fs);
+  font-family: var(--title-ff);
+  color: var(--color-blue);
+  letter-spacing: var(--letter-spacing);
+  font-weight: var(--regular);
+}
+
+.container {
+  gap: var(--gap);
+  align-items: center;
+  width: 100%;
+}
+
+.subtitle {
+  font-family: var(--subtitle-ff);
+  font-weight: var(--regular);
+  font-size: var(--subtitle-fs);
+  color:var(--color-red);
+  letter-spacing: calc(var(--letter-spacing) * 2);
+  text-transform: uppercase;
+}
+
+.item {
+  padding: var(--padding);
+  background-color: var(--color-light);
+  border-radius: 1.5rem;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.item-field {
+  font-family: var(--main-ff);
+  font-weight: var(--regular);
+  font-size: var(--main-fs);
+}
+
+span {
+  font-weight: var(--bold);
+  text-transform: uppercase;
 }
