@@ -61,6 +61,7 @@ function Main ( ) {
       <h1 className='title'>Homework 16.ReactJS.Hooks</h1>
         <div className='container column'>
           <h2 className='subtitle'>Contacts</h2>
+          <input className='search' placeholder='Find a person...'/>
             {elements}
         </div>
     </div>

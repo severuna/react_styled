@@ -36,6 +36,7 @@ body {
   --color-black: #232323;
   --letter-spacing: .9rem;
   --padding: 2rem;
+  --border-radius: 1.5rem;
 }
 
 .column {
@@ -70,6 +71,16 @@ body {
   width: 100%;
 }
 
+.search {
+  width: 100%;
+  padding: calc(var(--padding) / 2) calc(var(--padding) * 2);
+  font-size: var(--main-fs);
+  font-family: var(--main-ff);
+  font-weight: var(--regular);
+  letter-spacing: var(--letter-spacing);
+  border-radius: var(--border-radius);
+}
+
 .subtitle {
   font-family: var(--subtitle-ff);
   font-weight: var(--regular);
@@ -82,7 +93,7 @@ body {
 .item {
   padding: var(--padding);
   background-color: var(--color-light);
-  border-radius: 1.5rem;
+  border-radius: var(--border-radius);
   justify-content: space-between;
   width: 100%;
 }
