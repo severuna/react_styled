@@ -13,40 +13,44 @@ function Contact ( props ) {
 
 }
 
+const contacts_all = [
+  {
+      firstName: "Барней",
+      lastName: "Стинсовський",
+      phone: "+380956319521",
+      gender: "male"
+  }, {
+      firstName: "Робін",
+      lastName: "Щербатська",
+      phone: "+380931460123",
+      gender: "female"
+  }, {
+      firstName: "Анонімний",
+      lastName: "Анонімус",
+      phone: "+380666666666"
+  }, {
+      firstName: "Лілія",
+      lastName: "Олдровна",
+      phone: "+380504691254",
+      gender: "female"
+  }, {
+      firstName: "Маршен",
+      lastName: "Еріксонян",
+      phone: "+380739432123",
+      gender: "male"
+  }, {
+      firstName: "Теодор",
+      lastName: "Мотсбес",
+      phone: "+380956319521",
+      gender: "male"
+  }
+];
+
 function Main ( ) {
 
-      const [contacts, setContacts] = useState([
-        {
-            firstName: "Барней",
-            lastName: "Стинсовський",
-            phone: "+380956319521",
-            gender: "male"
-        }, {
-            firstName: "Робін",
-            lastName: "Щербатська",
-            phone: "+380931460123",
-            gender: "female"
-        }, {
-            firstName: "Анонімний",
-            lastName: "Анонімус",
-            phone: "+380666666666"
-        }, {
-            firstName: "Лілія",
-            lastName: "Олдровна",
-            phone: "+380504691254",
-            gender: "female"
-        }, {
-            firstName: "Маршен",
-            lastName: "Еріксонян",
-            phone: "+380739432123",
-            gender: "male"
-        }, {
-            firstName: "Теодор",
-            lastName: "Мотсбес",
-            phone: "+380956319521",
-            gender: "male"
-        }
-    ]);
+    const [contacts, setContacts] = useState(contacts_all);
+
+    const [search, setSearch] = useState('');
 
     let elements = [];
 
@@ -56,12 +60,26 @@ function Main ( ) {
         )
     });
 
+    function handleSearchChange( event ) {
+
+      setSearch(event.target.value)
+
+      console.log(search)
+
+      let filteredContacts =  contacts.filter(el => el.lastName.includes(search))
+
+      setContacts(filteredContacts);
+
+      console.log(contacts)
+
+    }
+
   return (
     <div className='main column'>
       <h1 className='title'>Homework 16.ReactJS.Hooks</h1>
         <div className='container column'>
           <h2 className='subtitle'>Contacts</h2>
-          <input className='search' placeholder='Find a person...'/>
+          <input className='search' placeholder='Find a person...' value={search} onChange={ (event) => { handleSearchChange(event) }} />
             {elements}
         </div>
     </div>
