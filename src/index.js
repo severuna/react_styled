@@ -60,19 +60,17 @@ function Main ( ) {
         )
     });
 
+
     function handleSearchChange( event ) {
 
-      setSearch(event.target.value)
+      setSearch(event.target.value);
 
-      console.log(search)
-
-      let filteredContacts =  contacts.filter(el => el.lastName.includes(search))
+      let filteredContacts =  contacts_all.filter(el => String(el.lastName).toLowerCase().includes(String(search).toLowerCase()));
 
       setContacts(filteredContacts);
 
-      console.log(contacts)
-
     }
+
 
   return (
     <div className='main column'>
