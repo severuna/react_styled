@@ -2,6 +2,17 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
+function Contact ( props ) {
+
+  return (
+    <div className='item row'>
+        <p className='item-field'><span>Contact:</span> {props.firstName} {props.lastName}</p>
+        <p className='item-field'><span>Phone:</span> {props.phone}</p>
+    </div>
+  )
+
+}
+
 function Main ( ) {
 
       const [contacts, setContacts] = useState([
@@ -41,10 +52,7 @@ function Main ( ) {
 
     contacts.forEach((el, i) => {
         elements.push(
-        <div key={i} className='item row'>
-            <p className='item-field'><span>Contact:</span> {el.firstName} {el.lastName}</p>
-            <p className='item-field'><span>Phone:</span> {el.phone}</p>
-        </div>
+          <Contact firstName={el.firstName} lastName={el.lastName} phone={el.phone} key={i} /> 
         )
     });
 
