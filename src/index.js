@@ -6,5 +6,5 @@ import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <h1>Init title</h1>
+  <h1 className='title'>Init title</h1>
 );

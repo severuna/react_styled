@@ -21,12 +21,9 @@ body {
 :root {
   --regular: 400;
   --bold: 700;
-  --title-ff: 'Sigmar', cursive;
   --title-fs: 4rem;
-  --subtitle-ff: 'Bruno Ace SC', cursive;
   --subtitle-fs: 3rem;
   --main-fs: 2.4rem;
-  --main-ff: 'Kanit', sans-serif;
   --gap: 3rem;
   --color-blue: turquoise;
   --color-red: tomato;
