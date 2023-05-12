@@ -7,6 +7,8 @@ import { InputField } from '../styled-components/InputField';
 import padlock from '../img/padlock.svg';
 import { Label } from '../styled-components/Label';
 import { InputCheckbox } from '../styled-components/InputCheckbox';
+import { LinkStyled, LinkLeft } from '../styled-components/LinkStyled';
+import { NameContainer } from '../styled-components/NameContainer';
 
 export const handleSubmit = ( e ) => {
     e.preventDefault();
@@ -25,6 +27,10 @@ const Login = () => {
                 <span>Remember me</span>
             </Label>
             <InputSubmit type='submit' value='Sign in' />
+            <NameContainer>
+                <LinkLeft to='#'>Forgot password?</LinkLeft>
+                <LinkStyled to='/react_styled/register'>Don't have an account? Sign up</LinkStyled>
+            </NameContainer>
         </FormCase>
     );
 };

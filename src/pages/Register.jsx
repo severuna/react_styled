@@ -9,6 +9,7 @@ import padlock from '../img/padlock.svg';
 import { handleSubmit } from './Login';
 import { Label } from '../styled-components/Label';
 import { InputCheckbox } from '../styled-components/InputCheckbox';
+import { LinkStyled } from '../styled-components/LinkStyled';
 
 const Register = () => {
     return (
@@ -26,6 +27,7 @@ const Register = () => {
                 <span>I want to receive inspiration, marketing promotions and updates via email</span>
             </Label>
             <InputSubmit type='submit' value='Sign up' /> 
+            <LinkStyled to='/react_styled/' >Already have an account? Sign in</LinkStyled>
         </FormCase>
     );
 };
