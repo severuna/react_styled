@@ -5,6 +5,8 @@ import { Title } from '../styled-components/Title';
 import { InputSubmit } from '../styled-components/InputSubmit';
 import { InputField } from '../styled-components/InputField';
 import padlock from '../img/padlock.svg';
+import { Label } from '../styled-components/Label';
+import { InputCheckbox } from '../styled-components/InputCheckbox';
 
 export const handleSubmit = ( e ) => {
     e.preventDefault();
@@ -18,6 +20,10 @@ const Login = () => {
             <Title>Sign in</Title>
             <InputField type="email" placeholder='Email Address' required="required" />
             <InputField type="password" placeholder='Password' required="required" />
+            <Label>
+                <InputCheckbox type='checkbox' />
+                <span>Remember me</span>
+            </Label>
             <InputSubmit type='submit' value='Sign in' />
         </FormCase>
     );
