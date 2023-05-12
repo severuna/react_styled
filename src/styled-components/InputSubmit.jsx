@@ -4,6 +4,7 @@ export const InputSubmit = styled.input`
     width: 100%;
     padding: 1rem;
     border: none;
+    border-radius: 1rem;
     background-color: mediumturquoise;
     color: #232323;
     text-transform: uppercase;
