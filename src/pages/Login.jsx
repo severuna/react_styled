@@ -1,10 +1,11 @@
 import React from 'react';
+import { FormCase } from '../styled-components/FormCase';
 
 const Login = () => {
     return (
-        <div>
+        <FormCase>
             <h1 className='title'>Login</h1>
-        </div>
+        </FormCase>
     );
 };
 

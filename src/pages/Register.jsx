@@ -1,10 +1,11 @@
 import React from 'react';
+import { FormCase } from '../styled-components/FormCase';
 
 const Register = () => {
     return (
-        <div>
-        <h1 className='title'>Register</h1>
-        </div>
+        <FormCase>
+            <h1 className='title'>Register</h1>
+        </FormCase>
     );
 };
 
