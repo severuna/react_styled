@@ -8,7 +8,7 @@ const Login = () => {
     return (
         <FormCase>
             <Icon src={padlock} alt='padlock' />
-            <Title>Login</Title>
+            <Title>Sign in</Title>
         </FormCase>
     );
 };

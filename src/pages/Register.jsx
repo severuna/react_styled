@@ -8,7 +8,7 @@ const Register = () => {
     return (
         <FormCase>
             <Icon src={padlock} alt='padlock' />
-            <Title>Register</Title>
+            <Title>Sign up</Title>
         </FormCase>
     );
 };
