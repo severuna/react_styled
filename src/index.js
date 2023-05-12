@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import Main from './Main';
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <h1 className='title'>Init title</h1>
+  <Main />
 );
