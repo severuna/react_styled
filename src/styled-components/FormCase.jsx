@@ -1,9 +1,9 @@
 import { styled } from "styled-components";
 
 export const FormCase = styled.form`
-    width: 50vw;
+    width: 40vw;
     margin: 4rem auto;
-    padding: 3rem;
+    padding: 7rem;
     border: 1px solid azure;
     border-radius: 1rem;
     display: flex;
