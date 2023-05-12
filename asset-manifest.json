@@ -1,13 +1,14 @@
 {
   "files": {
     "main.css": "/react_styled/static/css/main.84471503.css",
-    "main.js": "/react_styled/static/js/main.ebac40dd.js",
+    "main.js": "/react_styled/static/js/main.c527b605.js",
+    "static/media/padlock.svg": "/react_styled/static/media/padlock.eb300447391a7133cb587f7474722936.svg",
     "index.html": "/react_styled/index.html",
     "main.84471503.css.map": "/react_styled/static/css/main.84471503.css.map",
-    "main.ebac40dd.js.map": "/react_styled/static/js/main.ebac40dd.js.map"
+    "main.c527b605.js.map": "/react_styled/static/js/main.c527b605.js.map"
   },
   "entrypoints": [
     "static/css/main.84471503.css",
-    "static/js/main.ebac40dd.js"
+    "static/js/main.c527b605.js"
   ]
 }
