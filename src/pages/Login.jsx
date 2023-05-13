@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FormCase } from '../styled-components/FormCase';
 import { Icon } from '../styled-components/Icon';
 import { Title } from '../styled-components/Title';
@@ -10,20 +10,30 @@ import { InputCheckbox } from '../styled-components/InputCheckbox';
 import { LinkStyled, LinkLeft } from '../styled-components/LinkStyled';
 import { NameContainer } from '../styled-components/NameContainer';
 
-export const handleSubmit = ( e ) => {
-    e.preventDefault();
-    console.log(e)
-}
-
 const Login = () => {
+
+    const [ login, setLogin ] = useState({});
+
+    const handleChange = (event) => {
+        const name = event.target.name;
+        const value = event.target.value;
+        setLogin(values => ({...values, [name]: value}))
+    }
+
+    const handleSubmit = ( e ) => {
+        e.preventDefault();
+        console.log(`Login:`);
+        console.log(login);
+    }
+
     return (
         <FormCase onSubmit={handleSubmit}>
             <Icon src={padlock} alt='padlock' />
             <Title>Sign in</Title>
-            <InputField type="email" placeholder='Email Address' required="required" />
-            <InputField type="password" placeholder='Password' required="required" />
+            <InputField name="email" value={login.email || ""} onChange={handleChange} type="email" placeholder='Email Address' required="required" />
+            <InputField name="password" value={login.password || ""} onChange={handleChange} type="password" placeholder='Password' required="required" />
             <Label>
-                <InputCheckbox type='checkbox' />
+                <InputCheckbox name="checkbox" value={login.checkbox || "off"} onChange={handleChange} type='checkbox' />
                 <span>Remember me</span>
             </Label>
             <InputSubmit type='submit' value='Sign in' />
